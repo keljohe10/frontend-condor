@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">
+            <h2 class="text-muted">{{name}}</h2>
+            <h3 class="text-muted">miércoles, 13:00</h3>
+            <h3 class="text-muted">{{desc}}</h3>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="row mt-3">
+                    <div class="col-2">
+                        <img [src]="'http://openweathermap.org/img/w/'+icon+'.png'" class="icono img-fluid mt-2 ml-2">
+                    </div>
+                    <div class="col-5">
+                        <span class="clima">{{clima.temp}}</span>
+                    </div>
+                    <div class="col-5">
+                        <span class="propiedad"> <small>ºK</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <h4 class="text-muted"> <small>Presion: </small> {{clima.pressure}}</h4>
+                <h4 class="text-muted"> <small>Humedad: </small> {{clima.humidity}} %</h4>
+                <h4 class="text-muted"> <small>Temperatura maxima </small> {{clima.temp_max}}</h4>
+                <h4 class="text-muted"> <small>Temperatura minima </small> {{clima.temp_min}}</h4>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<form [formGroup]="forma" (ngSubmit)="registrarUsuario()">
+
+    <h3 class="box-title m-t-40 m-b-0">Regístrate ahora</h3><small>Crea tu cuenta y disfruta</small>
+    <br>
+    <br>
+    <div class="form-group m-t-20">
+        <div class="col-6">
+            <input formControlName="nombre" name="nombre" class="form-control" type="text" placeholder="Nombre" [ngClass]="{'danger': !forma.get('nombre').valid && forma.get('nombre').touched }">
+            <p class="form-control-feedback" *ngIf="forma.get('nombre').errors?.required && forma.get('nombre').touched">
+                <em>El campo nombre es requerido</em></p>
+        </div>
+    </div>
+    <div class="form-group ">
+        <div class="col-6">
+            <input formControlName="email" name="email" class="form-control" type="email" placeholder="Correo" [ngClass]="{'danger': !forma.get('email').valid && forma.get('email').touched}">
+            <p class="form-control-feedback" *ngIf="forma.controls['email'].errors?.required && forma.controls['email'].touched">
+                <em>El campo correo es requerido</em></p>
+            <p class="form-control-feedback" *ngIf="forma.controls['email'].errors?.email && forma.controls['email'].touched">
+                <em>Ingrese un email valido</em></p>
+        </div>
+    </div>
+
+
+    <div class="form-group text-center m-t-20">
+        <div class="col-6">
+            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Guardar</button>
+        </div>
+    </div>
+
+</form>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <ul>
+                <li *ngFor="let usuario of usuarios">
+                    {{usuario.nombre}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.clima {
+    font-size: 3.8em;
+}
+
+.propiedad {
+    font-size: 1.4em;
+    text-align: left;
+    margin-left: -45px;
+    padding-top: 50px;
+}
+
+.icono {
+    width: 100%;
+    height: 100%;
+}
